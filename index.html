@@ -1,338 +1,103 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>기호 2번 김진혁 | 더 나은 학교 생활</title>
+<meta charset="UTF-8">
+<title>기호 2번 A1 포스터</title>
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Jua&family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  body {
+    margin: 0;
+    background: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-  <style>
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: 'Fredoka', 'Jua', sans-serif;
-      background: linear-gradient(#87cefa, #e0f6ff);
-      color: #333;
-    }
+  /* A1 웹 인쇄용 사이즈 */
+  .poster {
+    width: 2480px;
+    height: 3508px;
+    background: linear-gradient(135deg, #fff176, #ff8a65);
+    position: relative;
+    overflow: hidden;
+    font-family: 'Arial Black', 'Jua', sans-serif;
+  }
 
-    /* ===== Header ===== */
-    header {
-      text-align: center;
-      padding: 70px 20px 90px;
-      background: linear-gradient(to bottom, #6ec6ff, #b3e5ff);
-      position: relative;
-      overflow: hidden;
-    }
-    header::after {
-      content: '';
-      position: absolute;
-      bottom: -40px;
-      left: 0;
-      width: 100%;
-      height: 90px;
-      background: #7ed957;
-      border-top-left-radius: 50% 100%;
-      border-top-right-radius: 50% 100%;
-    }
+  /* 장식 원 */
+  .circle {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.25;
+  }
+  .c1 { width: 900px; height: 900px; background:#42a5f5; top:-200px; left:-200px; }
+  .c2 { width: 700px; height: 700px; background:#66bb6a; bottom:-150px; right:-150px; }
+  .c3 { width: 500px; height: 500px; background:#ab47bc; top:20%; right:-200px; }
 
-    .badge {
-      display: inline-block;
-      background: #ff5252;
-      color: #fff;
-      font-size: 46px;
-      padding: 22px 44px;
-      border-radius: 50px;
-      box-shadow: 0 8px 0 #e53935;
-      margin-bottom: 20px;
-    }
+  /* 메인 텍스트 */
+  .number-box {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-    h1 {
-      font-size: 52px;
-      margin: 20px 0 10px;
-    }
+  .number {
+    font-size: 517px;
+    padding: 140px 220px;
+    border-radius: 300px;
+    background: #ff5252;
+    color: #fff;
+    box-shadow:
+      0 40px 0 #e53935,
+      0 80px 160px rgba(0,0,0,0.35);
+    transform: rotate(-6deg);
+    letter-spacing: -20px;
+  }
 
-    .subtitle {
-      font-size: 28px;
-      color: #0d47a1;
-    }
-
-    /* ===== Slider ===== */
-    .slider {
-      margin-top: 50px;
-      font-size: 34px;
-      font-weight: 600;
-      color: #fff;
-      height: 60px;
-      position: relative;
-    }
-
-    .slide {
-      position: absolute;
-      width: 100%;
-      opacity: 0;
-      transition: opacity 0.6s ease;
-    }
-
-    .slide.active {
-      opacity: 1;
-    }
-
-    /* ===== Section Common ===== */
-    section {
-      padding: 90px 20px;
-      text-align: center;
-      background: #f9fffb;
-    }
-
-    section.alt {
-      background: #ffffff;
-    }
-
-    h2 {
-      font-size: 40px;
-      margin-bottom: 20px;
-    }
-
-    .desc {
-      font-size: 18px;
-      margin-bottom: 40px;
-      color: #555;
-    }
-
-    /* ===== Cards ===== */
-    .card-wrap {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 28px;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-
-    .card {
-      background: #ffffff;
-      border-radius: 28px;
-      padding: 40px 25px;
-      box-shadow: 0 16px 28px rgba(0,0,0,0.08);
-    }
-
-    .card h3 {
-      font-size: 26px;
-      margin-bottom: 12px;
-    }
-
-    .card p {
-      font-size: 18px;
-    }
-
-    /* ===== Poster Section ===== */
-    .poster {
-      background: linear-gradient(#e8fff0, #ffffff);
-    }
-
-    .poster-box {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 50px 30px;
-      border-radius: 30px;
-      background: #ffffff;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-    }
-
-    .poster-title {
-/*      font-size: 44px;*/
-	  font-size: 32px;
-      color: #2e7d32;
-      margin-bottom: 30px;
-    }
-
-    .promise {
-      font-size: 20px;
-      margin: 14px 0;
-    }
-
-    /* ===== Footer ===== */
-    footer {
-      padding: 50px 20px;
-      text-align: center;
-      background: linear-gradient(#7ed957, #5fbf3f);
-      color: #fff;
-      font-size: 22px;
-    }
-
-    /* ===== Responsive ===== */
-    @media (max-width: 600px) {
-      h1 { font-size: 40px; }
-      h2 { font-size: 32px; }
-      .badge { font-size: 36px; }
-      .slider { font-size: 26px; }
-    }
-
-	.game-box {
-/*	  max-width: 900px;*/
-	  max-width: 500px;
-	  margin: 0 auto;
-	}
-	.draw-btn {
-	  padding: 16px 32px;
-	  font-size: 22px;
-	  border-radius: 30px;
-	  border: none;
-	  background: linear-gradient(45deg,#ff8a65,#ff5252);
-	  color: #fff;
-	  cursor: pointer;
-	  box-shadow: 0 8px 0 #e53935;
-	}
-	.draw-btn:active {
-	  box-shadow: none;
-	  transform: translateY(8px);
-	}
-	.card-area {
-	  margin-top: 40px;
-	  display: flex;
-	  justify-content: center;
-	  gap: 30px;
-	  flex-wrap: wrap;
-	}
-	.game-card {
-	  background: #ffffff;
-	  border-radius: 24px;
-	  padding: 20px;
-	  width: 45%;
-	  box-shadow: 0 14px 30px rgba(0,0,0,0.15);
-	  animation: pop 0.4s ease;
-	}
-	.game-card img {
-	  width: 100%;
-	}
-	.game-card p {
-	  font-size: 18px;
-	  margin-top: 12px;
-	  font-weight: 600;
-	}
-	.result-text {
-	  margin-top: 30px;
-	  font-size: 22px;
-	  color: #2e7d32;
-	  font-weight: 600;
-	}
-	@keyframes pop {
-	  from { transform: scale(0.7); opacity: 0; }
-	  to { transform: scale(1); opacity: 1; }
-	}
-  </style>
+  /* 포인트 라인 */
+  .line {
+    position: absolute;
+    height: 60px;
+    width: 100%;
+    background: rgba(255,255,255,0.5);
+    top: 55%;
+    transform: rotate(-4deg);
+  }
+</style>
 </head>
 <body>
 
-<header>
-  <div class="badge">⭐ 기호 2번</div>
-  <h1>김진혁</h1>
-  <div class="subtitle">학생이 중심인 학교</div>
+<div class="poster" id="poster">
+  <img src="j.png" style="position: absolute; top: 0px; left: 636px; width: 93%;"/>
+  <div class="circle c1"></div>
+  <div class="circle c2"></div>
+  <div class="circle c3"></div>
+  <div class="line"></div>
 
-  <div class="slider">
-    <div class="slide active">학생이 웃는 학교 🌈</div>
-    <div class="slide">의견이 반영되는 학교 💬</div>
-    <div class="slide">함께 만드는 학교 🤝</div>
+  <div class="number-box">
+    <div class="number">기호 2번</div>
   </div>
-</header>
+</div>
 
-<section>
-  <h2>더 나은 학교 생활</h2>
-  <p class="desc">말보다 실천으로 보여드리겠습니다</p>
-
-  <div class="card-wrap">
-    <div class="card">
-      <h3>📣 소통</h3>
-      <p>학생 의견을 듣고 실제로 반영하겠습니다</p>
-    </div>
-    <div class="card">
-      <h3>🏫 환경</h3>
-      <p>더 깨끗하고 편안한 학교를 만들겠습니다</p>
-    </div>
-    <div class="card">
-      <h3>🤝 참여</h3>
-      <p>모두가 함께하는 학생회를 만들겠습니다</p>
-    </div>
-  </div>
-</section>
-
-<section class="alt poster">
-  <div class="poster-box">
-    <div class="poster-title">기호 2번 김진혁의 약속</div>
-    <div class="promise">✔ 학생 목소리가 전달되는 학생회</div>
-    <div class="promise">✔ 작은 불편도 그냥 넘기지 않는 학교</div>
-    <div class="promise">✔ 모두가 참여하는 즐거운 학교 생활</div>
-  </div>
-</section>
-
-
-<section class="alt">
-  <h2>🎴 공약 카드 게임</h2>
-  <p class="desc">카드를 뽑아 김진혁의 학교 약속을 확인해보세요!</p>
-
-  <div class="game-box">
-    <button class="draw-btn" onclick="drawCard()">카드 뽑기</button>
-    <div id="cards" class="card-area"></div>
-    <p id="resultText" class="result-text"></p>
-  </div>
-</section>
-
-<footer>
-  기호 2번 김진혁<br>
-  더 나은 학교 생활을 위한 선택
-</footer>
+<button onclick="downloadPoster()"
+style="position:fixed;bottom:20px;right:20px;padding:12px 20px;font-size:18px;">
+PNG 다운로드
+</button>
 
 <script>
-  const slides = document.querySelectorAll('.slide');
-  let idx = 0;
-  setInterval(() => {
-    slides[idx].classList.remove('active');
-    idx = (idx + 1) % slides.length;
-    slides[idx].classList.add('active');
-  }, 3000);
-
-
-function drawCard() {
-  const messages = {
-    HEARTS: '❤️ 친구를 먼저 생각하는 학생회',
-    SPADES: '♠️ 질서 있고 공정한 학교',
-    DIAMONDS: '♦️ 시설이 개선되는 학교',
-    CLUBS: '♣️ 모두가 참여하는 학교'
-  };
-
-  fetch('https://deckofcardsapi.com/api/deck/new/draw/?count=2')
-    .then(res => res.json())
-    .then(data => {
-      const cardsDiv = document.getElementById('cards');
-      const result = document.getElementById('resultText');
-
-      cardsDiv.innerHTML = '';
-      result.textContent = '';
-
-      let finalMsg = '';
-
-      data.cards.forEach(card => {
-        const div = document.createElement('div');
-        div.className = 'game-card';
-
-        const img = document.createElement('img');
-        img.src = card.image;
-
-        const text = document.createElement('p');
-        text.textContent = messages[card.suit];
-
-        finalMsg = messages[card.suit];
-
-        div.appendChild(img);
-        div.appendChild(text);
-        cardsDiv.appendChild(div);
-      });
-
-      result.textContent = '👉 김진혁의 약속: ' + finalMsg;
-    });
+function downloadPoster() {
+  html2canvas(document.getElementById('poster'), {
+    scale: 2,
+    useCORS: true
+  }).then(canvas => {
+    const link = document.createElement('a');
+    link.download = 'gih2_A1.png';
+    link.href = canvas.toDataURL('image/png');
+    link.click();
+  });
 }
 </script>
-
 </body>
 </html>
