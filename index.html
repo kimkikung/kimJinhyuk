@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>기호 2번 김진혁 | 더 나은 학교 생활</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Jua&family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Fredoka', 'Jua', sans-serif;
+      background: linear-gradient(#87cefa, #e0f6ff);
+      color: #333;
+    }
+
+    /* ===== Header ===== */
+    header {
+      text-align: center;
+      padding: 70px 20px 90px;
+      background: linear-gradient(to bottom, #6ec6ff, #b3e5ff);
+      position: relative;
+      overflow: hidden;
+    }
+    header::after {
+      content: '';
+      position: absolute;
+      bottom: -40px;
+      left: 0;
+      width: 100%;
+      height: 90px;
+      background: #7ed957;
+      border-top-left-radius: 50% 100%;
+      border-top-right-radius: 50% 100%;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #ff5252;
+      color: #fff;
+      font-size: 46px;
+      padding: 22px 44px;
+      border-radius: 50px;
+      box-shadow: 0 8px 0 #e53935;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 52px;
+      margin: 20px 0 10px;
+    }
+
+    .subtitle {
+      font-size: 28px;
+      color: #0d47a1;
+    }
+
+    /* ===== Slider ===== */
+    .slider {
+      margin-top: 50px;
+      font-size: 34px;
+      font-weight: 600;
+      color: #fff;
+      height: 60px;
+      position: relative;
+    }
+
+    .slide {
+      position: absolute;
+      width: 100%;
+      opacity: 0;
+      transition: opacity 0.6s ease;
+    }
+
+    .slide.active {
+      opacity: 1;
+    }
+
+    /* ===== Section Common ===== */
+    section {
+      padding: 90px 20px;
+      text-align: center;
+      background: #f9fffb;
+    }
+
+    section.alt {
+      background: #ffffff;
+    }
+
+    h2 {
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+
+    .desc {
+      font-size: 22px;
+      margin-bottom: 40px;
+      color: #555;
+    }
+
+    /* ===== Cards ===== */
+    .card-wrap {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 28px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 28px;
+      padding: 40px 25px;
+      box-shadow: 0 16px 28px rgba(0,0,0,0.08);
+    }
+
+    .card h3 {
+      font-size: 26px;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      font-size: 18px;
+    }
+
+    /* ===== Poster Section ===== */
+    .poster {
+      background: linear-gradient(#e8fff0, #ffffff);
+    }
+
+    .poster-box {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 50px 30px;
+      border-radius: 30px;
+      background: #ffffff;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    }
+
+    .poster-title {
+      font-size: 44px;
+      color: #2e7d32;
+      margin-bottom: 30px;
+    }
+
+    .promise {
+      font-size: 24px;
+      margin: 14px 0;
+    }
+
+    /* ===== Footer ===== */
+    footer {
+      padding: 50px 20px;
+      text-align: center;
+      background: linear-gradient(#7ed957, #5fbf3f);
+      color: #fff;
+      font-size: 22px;
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 600px) {
+      h1 { font-size: 40px; }
+      h2 { font-size: 32px; }
+      .badge { font-size: 36px; }
+      .slider { font-size: 26px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="badge">⭐ 기호 2번</div>
+  <h1>김진혁</h1>
+  <div class="subtitle">학생이 중심인 학교</div>
+
+  <div class="slider">
+    <div class="slide active">학생이 웃는 학교 🌈</div>
+    <div class="slide">의견이 반영되는 학교 💬</div>
+    <div class="slide">함께 만드는 학교 🤝</div>
+  </div>
+</header>
+
+<section>
+  <h2>더 나은 학교 생활</h2>
+  <p class="desc">말보다 실천으로 보여드리겠습니다</p>
+
+  <div class="card-wrap">
+    <div class="card">
+      <h3>📣 소통</h3>
+      <p>학생 의견을 듣고 실제로 반영하겠습니다</p>
+    </div>
+    <div class="card">
+      <h3>🏫 환경</h3>
+      <p>더 깨끗하고 편안한 학교를 만들겠습니다</p>
+    </div>
+    <div class="card">
+      <h3>🤝 참여</h3>
+      <p>모두가 함께하는 학생회를 만들겠습니다</p>
+    </div>
+  </div>
+</section>
+
+<section class="alt poster">
+  <div class="poster-box">
+    <div class="poster-title">기호 2번 김진혁의 약속</div>
+    <div class="promise">✔ 학생 목소리가 전달되는 학생회</div>
+    <div class="promise">✔ 작은 불편도 그냥 넘기지 않는 학교</div>
+    <div class="promise">✔ 모두가 참여하는 즐거운 학교 생활</div>
+  </div>
+</section>
+
+<footer>
+  기호 2번 김진혁<br>
+  더 나은 학교 생활을 위한 선택
+</footer>
+
+<script>
+  const slides = document.querySelectorAll('.slide');
+  let idx = 0;
+  setInterval(() => {
+    slides[idx].classList.remove('active');
+    idx = (idx + 1) % slides.length;
+    slides[idx].classList.add('active');
+  }, 3000);
+</script>
+
+</body>
+</html>
