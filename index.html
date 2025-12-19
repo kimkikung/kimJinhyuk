@@ -44,18 +44,20 @@
   }
 
   .number {
-    font-size: 517px;
-    padding: 140px 220px;
-    border-radius: 300px;
-    background: #ff5252;
+    /* font-size: 50px; */
+    font-size: 1000px;
+    /* padding: 140px 220px; */
+    /* border-radius: 0px; */
+    /* background: #ff5252; */
     color: #fff;
-    box-shadow:
-      0 40px 0 #e53935,
-      0 80px 160px rgba(0,0,0,0.35);
-    transform: rotate(-6deg);
-    letter-spacing: -20px;
-	position: absolute;
-    top: 1675px;
+    /* box-shadow: 0 40px 0 #e53935, 0 80px 160px rgba(0, 0, 0, 0.35); */
+    transform: rotate(43deg);
+    /* letter-spacing: -27px; */
+    z-index: 999;
+    position: absolute;
+	left: 57%;
+    top: 11%;
+}
   }
 
   /* 포인트 라인 */
@@ -64,22 +66,65 @@
     height: 60px;
     width: 100%;
     background: rgba(255,255,255,0.5);
-    top: 58%;
+    top: 55%;
     transform: rotate(-4deg);
+  }
+
+    /* ===== HEART ===== */
+  .heart {
+    position: relative;
+    width: 396mm;
+    height: 379mm;
+    background: #ff4d4d;
+    transform: rotate(-49deg);
+    border-radius: 20mm;
+    z-index: 2;
+    box-shadow:
+      0 18mm 30mm rgba(0, 0, 0, 0.18),
+      0 6mm 10mm rgba(0, 0, 0, 0.12);
+
+
+  }
+
+  .heart::before,
+  .heart::after {
+    content: '';
+    position: absolute;
+    width: 420mm;
+    height: 380mm;
+    background: #ff4d4d;
+    border-radius: 50%;
+  }
+
+  .heart::before {
+    top: -160mm;
+    left: 0;
+  }
+
+  .heart::after {
+    left: 160mm;
+    top: 0;
   }
 </style>
 </head>
 <body>
 
 <div class="poster" id="poster">
-  <img src="j.png" style="position: absolute; top: 150px; left: 696px; width: 88%;"/>
+
   <div class="circle c1"></div>
   <div class="circle c2"></div>
   <div class="circle c3"></div>
   <div class="line"></div>
 
   <div class="number-box">
-    <div class="number">기호 2번</div>
+<img src="j2.png" style="    position: absolute;
+    top: 180px;
+    left: 189px;
+    width: 60%;
+    z-index: 9;"/>
+	  <div class="heart">
+   	    <div class="number">2</div>
+	  </div>
   </div>
 </div>
 
