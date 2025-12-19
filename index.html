@@ -299,7 +299,7 @@ function drawCard() {
     CLUBS: '♣️ 모두가 참여하는 학교'
   };
 
-  fetch('https://deckofcardsapi.com/api/deck/new/draw/?count=4')
+  fetch('https://deckofcardsapi.com/api/deck/new/draw/?count=2')
     .then(res => res.json())
     .then(data => {
       const cardsDiv = document.getElementById('cards');
